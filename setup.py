@@ -22,12 +22,16 @@ with open('requirements.txt') as requirements:
     required = requirements.read().splitlines()
 
 
+data_files = [('.', ['coala.1']), ('.', [Constants.BUS_NAME + '.service'])]
+data_files.extend()
+
+
 if __name__ == "__main__":
     maintainers = "Lasse Schuirmann, Fabian Neuschmidt, Mischa Kr\xfcger"
     maintainer_mails = ('lasse.schuirmann@gmail.com, '
                         'fabian@neuschmidt.de, '
                         'makman@alice.de')
-    data_files = [('.', ['coala.1']), ('.', [Constants.BUS_NAME + '.service'])]
+    data_files = data_files
 
     setup(name='coala',
           version=Constants.VERSION,
